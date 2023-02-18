@@ -1,0 +1,154 @@
+/* Variables */
+:root{
+    --mainColor:#0a004a;
+    --zweiteColor:#a3c2e6;
+    --dritteColor:#00eaff;
+    --vierteColor:#2d2e5a;
+    
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--mainColor);
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+   
+    text-decoration: none;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+   max-width: 1500px;
+    
+}
+
+form {
+    margin: 0 auto;
+    position: relative;
+}
+form span a {
+    color: var(--mainColor);
+    position: absolute;
+    left: 5px;
+    top: 0;
+    font-size: 20px;
+}
+form button.suchen{
+    background-color: var(--zweiteColor);
+    color: var(--mainColor);
+    border: none;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.6rem;
+}
+form button.suchen:hover{
+    background-color: var(--vierteColor);
+    color: #fff;
+    cursor: pointer;
+    
+}
+h1,
+h3,
+h4 {
+    text-align: center;
+}
+
+label {
+	display: inline-block;
+	width: 140px;
+	vertical-align: top;
+	padding-top: 5px;
+}
+
+input + label {
+    margin-bottom: 10px;
+}
+
+textarea, input[type=date], select, input[type=text] {
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 70px;
+}
+
+span {
+    color: red;
+}
+
+table {
+    margin: 0 auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 2px solid var(--mainColor);
+    width: 100%;
+    
+}
+
+#unten {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+tr:nth-child(odd) {
+    background-color: var(--zweiteColor);
+}
+th{
+    background-color: var(--mainColor);
+    color: #fff;
+    
+}
+th, td {
+    text-align: left;
+    padding: 5px 15px;
+    
+}
+
+th a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.loeschen {
+    color: red;
+}
+
+.aendern {
+    color: blue;
+}
+
+.hinzufuegen {
+    font-size: 1.05em;
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+#paginator {
+    text-align: center;
+    color: var(--mainColor);
+}
+#paginator a{
+    color: var(--mainColor);
+}
+
+#löschen {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.speicherbutton {
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+.h3red {
+    color: red;
+}

@@ -1,0 +1,369 @@
+/* Variables */
+:root{
+    --mainColor:#0a004a;
+    --zweiteColor:#a3c2e6;
+    --dritteColor:#00eaff;
+    --vierteColor:#2d2e5a;
+    
+}
+
+/* global Gestaltung */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0 ;
+    color: var(--mainColor);
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    
+}
+h1{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+.center{
+    text-align: center;
+}
+div.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper header,aside,main{
+    padding: 1rem;
+
+}
+
+
+/* Header Bereich */
+
+div.wrapper header{
+    background-color: var(--mainColor);
+    height: 100px;
+}
+
+div.wrapper header nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+div.wrapper header nav ul a{
+    font-size: 1rem;
+    color: var(--dritteColor) ;
+}
+div.wrapper header nav ul a:hover{
+    color: orange;
+}
+
+
+/* Inhalt Bereich */
+
+div.wrapper div.inhalt{
+    flex: 1;
+    display: flex;
+}
+
+
+/* ASide Bereich */
+div.wrapper aside{
+    background-color: var(--zweiteColor); 
+    flex:1;
+}
+div.wrapper aside form{
+    width:90%;
+    margin: 1rem auto;
+    
+
+}
+div.wrapper aside form h2{
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.2rem;
+}
+div.wrapper aside form div{
+   
+    margin:0.8rem auto;
+   
+}
+div.wrapper aside form div:last-child{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+div.wrapper aside form label{
+    display: inline-block;
+    width: 35%;
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+div.wrapper aside form div:nth-child(9) label{
+    width: 52%;
+   
+}
+div.wrapper aside form input:not(input[type = checkbox]),
+div.wrapper aside form select{
+    display: inline-block;
+    width: 55%;
+    height: 30px;
+    margin-left: 25px;
+    padding: 0.3rem;
+    text-align: center;
+    box-shadow: 1px 1px 1px #555;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+div.wrapper aside form input:focus,
+div.wrapper aside form input[type = checkbox]:focus{
+    outline: 1px solid var(--mainColor);
+    opacity: 0.9;
+}
+div.wrapper aside form input[type = checkbox]{
+    display: inline-block;
+    width:20px;
+    height:20px ;
+}
+div.wrapper aside form div span{
+    margin-top: 1rem;
+}
+div.wrapper aside form button{
+    display: block;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    width: 90px;
+    margin-top: 0.7rem;
+    background-color: #dfdfdfd6;
+    border: none;
+    
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+   
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+}
+div.wrapper aside form button:hover{
+    padding: 0.4rem 1.1rem;
+    background-color: var(--vierteColor);
+    color: #fff;
+}
+
+
+
+/* Main Bereich */
+
+div.wrapper main{
+    
+    background: #fff;
+    position: relative;
+    flex:3;
+
+}
+div.wrapper main::before{
+ content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url('../bilder/main1.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: 1;
+}
+div.wrapper main div.behalter{
+    position: relative;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    z-index: 5;
+
+
+}
+div.wrapper main div.behalter div.event{
+    width: 22%;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 0 0 20px 20px;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    -ms-border-radius: 0 0 20px 20px;
+    -o-border-radius: 0 0 20px 20px;
+}
+div.wrapper main div.behalter div.event img{
+width:100% ;
+}
+div.wrapper main div.behalter div.event a{
+    display: inline-block;
+    background-color: var(--dritteColor);
+    color: #fff;
+    padding: 0.2rem 0.8rem;
+    margin-top: 0.6rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+div.wrapper main div.behalter div.event a:hover{
+    background-color: var(--vierteColor);
+}
+div.wrapper main div.behalter div.paginator{
+    width: 100%;
+    
+}
+
+div.wrapper main div.behalter div.paginator div{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+    
+}
+div.wrapper main div.behalter div.paginator a{
+    background-color: var(--dritteColor);
+    color: #fff;
+    padding: 0 0.7rem;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+div.wrapper main div.behalter div.paginator a:hover{
+    background-color: var(--vierteColor);
+    color: #fff; 
+}
+
+
+
+/* Footer Bereich */
+div.wrapper footer{
+    background-color: var(--mainColor);
+    color: #fff;
+    height: 50px;
+    text-align: center;
+    
+}
+div.wrapper footer p{
+    line-height: 50px;
+    color: #fff;
+}
+
+/* ###################################
+   ######## Events_info Seite ########
+   ################################### */
+   table{
+    width: 60%;
+    height: 60%;
+    background-color: #eee;
+    border-collapse: collapse;
+    box-shadow: inset -1px -1px 20px #000;
+    
+
+   }
+   div.info main table th{
+    background-color: var(--mainColor);
+    color: #fff;
+   }
+   div.info main table th,div.info main table td{
+    padding: 1rem;
+    font-weight: bold;
+    
+   }
+   div.info main table tr:not(:last-child){
+    border-bottom: 2px solid var(--mainColor);
+   }
+   div.info main table tr:not(:last-child) th{
+    border-bottom: 2px solid var(--dritteColor);
+   }
+   div.info main table tr td{
+    color: var(--mainColor);
+   }
+
+/* ###################################
+   ##### Seite Event_loeschen_ok #####
+   ################################### */
+  
+div.loeschenOk{
+height: 900px;
+display: grid;
+place-content: center;
+text-align: center;
+
+}
+div.loeschenOk div{
+    background-color: #eee;
+    padding:3rem 5rem;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+div.loeschenOk h1{
+    color: var(--mainColor);
+    margin-bottom: 1rem;
+}
+div.loeschenOk h3 a{
+        display: inline-block;
+        background-color: var(--dritteColor);
+        color: var(--mainColor);
+        padding: 0.3rem 0.7rem;
+        cursor: pointer;
+        border-radius:15px ;
+        -webkit-border-radius:15px ;
+        -moz-border-radius:15px ;
+        -ms-border-radius:15px ;
+        -o-border-radius:15px ;
+        transition: 500ms;
+        -webkit-transition: 500ms;
+        -moz-transition: 500ms;
+        -ms-transition: 500ms;
+        -o-transition: 500ms;
+}
+div.loeschenOk h3 a:hover{
+background-color: orange;
+color: #fff;
+}

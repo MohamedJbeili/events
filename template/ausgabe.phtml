@@ -1,0 +1,22 @@
+<?php foreach($events as $event):?>
+                    <div class="event">
+                       
+                        <img src="bilder/main.jpg" alt="ein Bild von Event">
+                     
+                        <?php foreach($event as $key => $wert):?>
+                        
+                        <?php if($key == "id"):?>
+                        <a href="events_info.php?id=<?=$wert?>">mehr Information</a>
+                        <?php elseif($key == "plz" || $key == "ort"):?>
+                        <span><?= htmlspecialchars($wert)?></span>
+                        <?php else:?>
+                        <p><?= htmlspecialchars($wert)?></p>
+
+                        <?php endif;?>
+                        
+                        <?php endforeach;?>
+                        
+                       
+                     
+                    </div> <!--  event -->  
+                    <?php endforeach;?>
